@@ -82,7 +82,7 @@ async function commitToGitHub(repoFilePath, bufferOrString, commitMessage) {
   const token = getGitHubToken();
   if (!token) return { success: false, reason: 'GITHUB_TOKEN_NOT_SET' };
 
-  const owner = process.env.GITHUB_OWNER || 'Nairb68';
+  const owner = process.env.GITHUB_OWNER || 'atelier-sarahschu';
   const repo = process.env.GITHUB_REPO || 'atelier-sarah-schu';
   const branch = process.env.GITHUB_BRANCH || 'main';
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${repoFilePath}?ref=${branch}`;
@@ -473,6 +473,7 @@ async function commitToGitHub(repoFilePath, bufferOrString, commitMessage) {
         const proto = req.headers['x-forwarded-proto'] || (req.connection && req.connection.encrypted ? 'https' : 'https');
         const currentOrigin = `${proto}://${host}`;
         html = html.split('https://atelier-sarah-schu.onrender.com').join(currentOrigin);
+        html = html.split('https://atelier-sarah-schu-cssx.onrender.com').join(currentOrigin);
       }
       res.writeHead(200, {
         'Content-Type': 'text/html; charset=utf-8',

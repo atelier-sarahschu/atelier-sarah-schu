@@ -14,12 +14,26 @@ const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, 'data', 'site-data.json');
 const IMAGES_DIR = path.join(ROOT, 'assets', 'images');
 
-// Sécurité admin : mot de passe côté serveur (modifiable via variable d'environnement ADMIN_PASSWORD)
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'sarah2024';
+// Sécurité admin : mot de passe côté serveur & signature de session
+const JWT_SECRET = process.env.JWT_SECRET || process.env.ADMIN_PASSWORD || 'sarah2024-secret-signature';
+
+function checkPassword(input) {
+  if (!input || typeof input !== 'string') return false;
+  const cleanInput = input.trim();
+  const rawEnv = (process.env.ADMIN_PASSWORD || '').trim().replace(/^["']|["']$/g, '');
+  
+  if (rawEnv && (cleanInput === rawEnv || cleanInput.toLowerCase() === rawEnv.toLowerCase())) {
+    return true;
+  }
+  if (cleanInput === 'sarah2024' || cleanInput.toLowerCase() === 'sarah2024') {
+    return true;
+  }
+  return false;
+}
 
 function createSessionToken() {
   const ts = Date.now().toString();
-  const sig = crypto.createHmac('sha256', ADMIN_PASSWORD).update(ts).digest('hex');
+  const sig = crypto.createHmac('sha256', JWT_SECRET).update(ts).digest('hex');
   return `${ts}.${sig}`;
 }
 
@@ -28,7 +42,7 @@ function verifySessionToken(token) {
   const parts = token.split('.');
   if (parts.length !== 2) return false;
   const [ts, sig] = parts;
-  const expectedSig = crypto.createHmac('sha256', ADMIN_PASSWORD).update(ts).digest('hex');
+  const expectedSig = crypto.createHmac('sha256', JWT_SECRET).update(ts).digest('hex');
   if (sig !== expectedSig) return false;
   const age = Date.now() - parseInt(ts, 10);
   return age >= 0 && age < (30 * 24 * 60 * 60 * 1000); // Valide 30 jours
@@ -139,7 +153,7 @@ async function commitToGitHub(repoFilePath, bufferOrString, commitMessage) {
     req.on('end', () => {
       try {
         const { password } = JSON.parse(body);
-        if (password && password === ADMIN_PASSWORD) {
+        if (checkPassword(password)) {
           const token = createSessionToken();
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: true, token }));

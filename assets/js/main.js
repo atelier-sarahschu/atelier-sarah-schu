@@ -1388,15 +1388,34 @@
     mobileLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         const targetHref = link.getAttribute('href');
-        closeMobileNav();
-        if (targetHref && targetHref.startsWith('#') && targetHref.length > 1) {
-          const targetEl = document.querySelector(targetHref);
-          if (targetEl) {
-            e.preventDefault();
-            setTimeout(() => {
-              targetEl.scrollIntoView({ behavior: 'smooth' });
-            }, 10);
-          }
+        if (targetHref && targetHref.startsWith('#')) {
+          e.preventDefault();
+          closeMobileNav();
+          setTimeout(() => {
+            if (targetHref === '#accueil' || targetHref === '#') {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            } else {
+              const targetEl = document.querySelector(targetHref);
+              if (targetEl) {
+                const header = document.querySelector('.site-header');
+                const headerHeight = header ? header.offsetHeight : 70;
+                const elementPosition = targetEl.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                window.scrollTo({
+                  top: Math.max(0, offsetPosition),
+                  behavior: 'smooth'
+                });
+              }
+            }
+            if (history.replaceState) {
+              history.replaceState(null, '', targetHref);
+            }
+          }, 60);
+        } else {
+          closeMobileNav();
         }
       });
     });

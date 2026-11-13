@@ -1,6 +1,12 @@
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /admin.html
 Disallow: /data/
 
-Sitemap: https://atelier-sarah-schu-cssx.onrender.com/sitemap.xml
+Sitemap: https://atelier-sarah.fr/sitemap.xml

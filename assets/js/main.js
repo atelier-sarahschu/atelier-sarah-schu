@@ -111,7 +111,7 @@
     const a = siteData.artist;
 
     // Métadonnées & Marque
-    document.title = `${a.brandName} — Atelier de Fresques & Aquarelle · Alsace`;
+    document.title = `${a.brandName} — Fresques Murales & Trompe-l'Œil sur Mesure · Alsace`;
     updateElementText('.brand-name', a.brandName);
     updateElementText('.brand-sub', a.brandSubtitle || 'ATELIER DE FRESQUES & AQUARELLE · ALSACE');
     updateElementSrc('.brand-avatar', a.profilePhoto);
@@ -202,7 +202,7 @@
       return `
         <article class="artwork-card" data-project-id="${p.id}">
           <div class="artwork-frame">
-            <img src="${p.mainImage}" alt="${p.title}" loading="lazy" onerror="this.onerror=null; this.src='assets/images/hero-art.jpg';">
+            <img src="${p.mainImage}" alt="Fresque murale ${p.title} - ${p.location || 'Alsace'} peinte par Sarah Schu" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/images/hero-art.jpg';">
             ${photosCount > 1 ? `
               <span class="artwork-photo-badge">
                 <i class="fa-solid fa-images"></i> ${photosCount} photos

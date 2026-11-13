@@ -524,6 +524,8 @@ async function commitToGitHub(repoFilePath, bufferOrString, commitMessage) {
       headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
       headers['Pragma'] = 'no-cache';
       headers['Expires'] = '0';
+    } else if (['.jpg', '.jpeg', '.png', '.webp', '.svg', '.ico'].includes(ext)) {
+      headers['Cache-Control'] = 'public, max-age=604800, stale-while-revalidate=86400';
     }
 
     res.writeHead(200, headers);

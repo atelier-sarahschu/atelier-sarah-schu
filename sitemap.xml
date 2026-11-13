@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://atelier-sarah.fr/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/og-logo-sarah-schu.jpg</image:loc>
+      <image:title>Atelier Sarah Schu — Fresques Murales &amp; Trompe-l'Œil en Alsace</image:title>
+      <image:caption>Sarah Schu, artiste peintre muraliste à Zimmerbach (Colmar, Alsace)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/logo-emblem.png</image:loc>
+      <image:title>Emblème officiel de l'Atelier Sarah Schu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792404580812.jpg</image:loc>
+      <image:title>Fresque Zen en EHPAD — Vallée de Munster (Alsace)</image:title>
+      <image:caption>Fresque murale peinte in situ pour le bien-être des résidents</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/post1_DeMNkRqDLyA_01.jpg</image:loc>
+      <image:title>Trompe-l'œil Forêt sur Porte Intérieure — Secteur Colmar et Munster</image:title>
+      <image:caption>Peinture acrylique en perspective ouvrant l'espace vers la nature</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/post2_Dd9GbcwDM6-_01.jpg</image:loc>
+      <image:title>Fresque Murale Chambre Parentale — Wintzenheim (Alsace)</image:title>
+      <image:caption>Décor panoramique alpin peint à la main en tête de lit</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792167316379.jpg</image:loc>
+      <image:title>Fresque Monumentale La Nature Pop du Parcharmonie — Lyon</image:title>
+      <image:caption>Fresque murale monumentale de 25m x 3m</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792404415816.jpg</image:loc>
+      <image:title>Fresque Participative au Foyer Caroline Bestelda — Munster</image:title>
+      <image:caption>Création in situ pour établissement médico-social</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792505519228.jpg</image:loc>
+      <image:title>Fresque Murale Les Instruments de Musique — Chambre d'enfant en Alsace</image:title>
+      <image:caption>Décor poétique et coloré peint à la main avec peintures saines sans odeur</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792505855257.jpg</image:loc>
+      <image:title>Trompe-l'œil La Couturière à la Perle — Breitenbach (Alsace)</image:title>
+      <image:caption>Peinture décorative murale classique inspirée de Vermeer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792505723576.jpg</image:loc>
+      <image:title>Fresque Murale &amp; Décoration chez Brasserie KS — Colmar</image:title>
+      <image:caption>Décoration murale peinte à la main pour brasserie artisanale</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/upload_1792666959811.jpg</image:loc>
+      <image:title>Ateliers et Cours d'Aquarelle — Alsace (Colmar / Zimmerbach)</image:title>
+      <image:caption>Initiation et perfectionnement artistique à l'aquarelle et au dessin</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -1,12 +1,32 @@
+# Robots.txt — Atelier Sarah Schu (https://atelier-sarah.fr/)
+# Directives pour moteurs de recherche (Google, Bing, Qwant, DuckDuckGo) et réseaux sociaux
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /data/
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
 User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Facebot
 Allow: /
 
-User-agent: *
+User-agent: Twitterbot
 Allow: /
-Disallow: /admin.html
-Disallow: /data/
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
 
 Sitemap: https://atelier-sarah.fr/sitemap.xml

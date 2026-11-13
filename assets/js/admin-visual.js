@@ -639,6 +639,8 @@
     setText('#contact-location-text', a.location);
     setText('#contact-instagram-text', a.instagramHandle || (a.instagram ? '@' + a.instagram.replace(/\/+$/, '').split('/').pop() : '@sarahschu.art'));
     setText('#contact-facebook-text', a.facebook ? (a.facebook.includes('profile.php') ? 'Sarah Schu Art' : a.facebook.replace(/\/+$/, '').split('/').pop()) : 'Sarah Schu Art');
+    setText('#contact-googlemaps-text', a.googleMaps || 'https://maps.app.goo.gl/6BRgbra31wX7ybM88');
+    setText('#contact-web3forms-key', a.web3formsKey || 'fe10a643-944e-4a1d-9d04-9b384cff82f1');
 
     // Rendu dynamique des filtres de catégories
     renderCategoryFilters();
@@ -1323,7 +1325,9 @@
       '#contact-email-text',
       '#contact-location-text',
       '#contact-instagram-text',
-      '#contact-facebook-text'
+      '#contact-facebook-text',
+      '#contact-googlemaps-text',
+      '#contact-web3forms-key'
     ];
 
     editables.forEach(sel => {
@@ -2504,6 +2508,10 @@
     if (fbVal) {
       a.facebook = fbVal.startsWith('http') ? fbVal : (fbVal.includes('profile.php') ? fbVal : `https://www.facebook.com/${fbVal.replace('@', '')}`);
     }
+    const gmapsVal = getText('#contact-googlemaps-text');
+    if (gmapsVal) a.googleMaps = gmapsVal;
+    const web3Val = getText('#contact-web3forms-key');
+    if (web3Val) a.web3formsKey = web3Val;
 
     // Chiffres Clés
     document.querySelectorAll('.trust-item').forEach(item => {

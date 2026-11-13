@@ -736,6 +736,14 @@
     fbLinks.forEach(link => {
       if (a.facebook) link.href = a.facebook;
     });
+
+    // Google Maps
+    if (a.googleMaps) {
+      const gmapsLinks = document.querySelectorAll('.contact-gmaps-link, .link-gmaps, a[href*="maps.app.goo.gl"], a[href*="google.fr/maps"], a[href*="google.com/maps"]');
+      gmapsLinks.forEach(link => {
+        link.href = a.googleMaps;
+      });
+    }
   }
 
   /* ==========================================================================
@@ -1224,14 +1232,15 @@
           console.warn('Erreur enregistrement serveur /api/contact', err);
         }
 
-        // 3. ENVOI PAR E-MAIL VIA WEB3FORMS (avec noms de champs conformes)
+        // 3. ENVOI PAR E-MAIL VIA WEB3FORMS (avec clé configurable)
         let sent = false;
         const customAction = form.getAttribute('action') || 'https://api.web3forms.com/submit';
+        const web3Key = (siteData && siteData.artist && siteData.artist.web3formsKey) ? siteData.artist.web3formsKey : 'fe10a643-944e-4a1d-9d04-9b384cff82f1';
 
         // Tentative 1 : avec FormData et pièce jointe réelle si photo présente
         try {
           const formData = new FormData();
-          formData.append('access_key', 'fe10a643-944e-4a1d-9d04-9b384cff82f1');
+          formData.append('access_key', web3Key);
           formData.append('subject', `Nouvelle demande de projet — ${nom} (${typeProjet})`);
           formData.append('from_name', 'Atelier Sarah Schu (Site Web)');
           formData.append('name', nom);
@@ -1270,7 +1279,7 @@
                 'Accept': 'application/json'
               },
               body: JSON.stringify({
-                access_key: 'fe10a643-944e-4a1d-9d04-9b384cff82f1',
+                access_key: web3Key,
                 subject: `Nouvelle demande de projet — ${nom} (${typeProjet})`,
                 from_name: 'Atelier Sarah Schu (Site Web)',
                 name: nom,

@@ -7,6 +7,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
+      <image:loc>https://atelier-sarah.fr/assets/images/og-banner-sarah-schu.jpg</image:loc>
+      <image:title>Bannière officielle Atelier Sarah Schu — Fresques Murales &amp; Trompe-l'Œil en Alsace</image:title>
+      <image:caption>Sarah Schu, artiste peintre muraliste à Zimmerbach (Colmar, Alsace)</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://atelier-sarah.fr/assets/images/og-logo-sarah-schu.jpg</image:loc>
       <image:title>Atelier Sarah Schu — Fresques Murales &amp; Trompe-l'Œil en Alsace</image:title>
       <image:caption>Sarah Schu, artiste peintre muraliste à Zimmerbach (Colmar, Alsace)</image:caption>

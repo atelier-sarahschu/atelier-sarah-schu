@@ -519,13 +519,23 @@ async function commitToGitHub(repoFilePath, bufferOrString, commitMessage) {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-    const headers = { 'Content-Type': contentType };
+    const headers = { 
+      'Content-Type': contentType,
+      'Content-Length': stats.size,
+      'Accept-Ranges': 'bytes'
+    };
     if (ext === '.json' || ext === '.html' || ext === '.js' || ext === '.css') {
       headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
       headers['Pragma'] = 'no-cache';
       headers['Expires'] = '0';
     } else if (['.jpg', '.jpeg', '.png', '.webp', '.svg', '.ico'].includes(ext)) {
       headers['Cache-Control'] = 'public, max-age=604800, stale-while-revalidate=86400';
+    }
+
+    if (req.method === 'HEAD') {
+      res.writeHead(200, headers);
+      res.end();
+      return;
     }
 
     res.writeHead(200, headers);

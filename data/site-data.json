@@ -433,15 +433,16 @@
     },
     {
       "id": "proj-1792405327726",
-      "title": "Ateliers et cours particuliers",
+      "title": "Interventions, ateliers et cours particuliers",
       "category": "fresques",
       "categoryLabel": "Particuliers & Résidentiel",
       "location": "Alsace",
       "year": "2026",
       "technique": "Peinture, argile, aquarelle",
-      "description": "Je vous accompagne dans la création de votre œuvre originale que ce soit pour de l’argile, de l’aquarelle ou du dessin académique. Je propose des cours/ateliers pour enfants et adultes.",
-      "mainImage": "assets/images/upload_1792666959811.jpg",
+      "description": "Je propose des interventions et ateliers artistiques pour tous les publics et toutes les structures : écoles, collectivités, associations, centres de loisirs et particuliers. Au programme : dessin, peinture, modelage, argile et activités créatives adaptées à vos envies. Je propose également des cours particuliers pour apprendre et progresser à son rythme.",
+      "mainImage": "assets/images/upload_1794653654893.jpg",
       "gallery": [
+        "assets/images/upload_1794653654893.jpg",
         "assets/images/upload_1792666959811.jpg",
         "assets/images/upload_1792405099434.jpg"
       ],
@@ -496,7 +497,7 @@
       "answer": "Je suis basée à Zimmerbach près de Colmar et Munster, et j'interviens dans toute l'Alsace (Haut-Rhin et Bas-Rhin). Je me déplace également partout en France pour des projets d'envergure ou pour des résidences artistiques."
     }
   ],
-  "lastUpdated": "2026-11-13T10:31:58.576Z",
+  "lastUpdated": "2026-11-14T10:56:01.960Z",
   "categories": [
     {
       "id": "fresques",

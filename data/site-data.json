@@ -162,6 +162,24 @@
   ],
   "projects": [
     {
+      "id": "proj-1795626580002",
+      "title": "La forêt des animaux",
+      "category": "fresques",
+      "categoryLabel": "Particuliers & Résidentiel",
+      "location": "Aubure",
+      "year": "2026",
+      "technique": "Acrylique",
+      "description": "Un petit coin de nature s’est invité dans cette chambre d’enfant…\nÀ travers cette fresque murale, j’ai souhaité créer un univers doux et enchanteur, peuplé d’animaux de la forêt : un renard, un cerf, une chouette, un pic-vert et un écureuil.\nChaque animal trouve sa place dans ce paysage, comme une invitation à rêver, à observer et à laisser libre cours à son imagination.\nUne fresque peut transformer un simple mur en un petit monde à part entière, un décor unique qui accompagne les premières histoires, les jeux et les rêves. \nUn univers personnalisé, en harmonie avec vos envies et votre intérieur.",
+      "mainImage": "assets/images/upload_1795626263224.jpg",
+      "gallery": [
+        "assets/images/upload_1795626263224.jpg",
+        "assets/images/upload_1795626267010.jpg",
+        "assets/images/upload_1795626276283.jpg",
+        "assets/images/upload_1795626279621.jpg"
+      ],
+      "featured": true
+    },
+    {
       "id": "proj-ehpad-vallee-munster",
       "title": "Fresque Zen en EHPAD",
       "category": "collectivites",
@@ -495,7 +513,7 @@
       "answer": "Je suis basée à Zimmerbach près de Colmar et Munster, et j'interviens dans toute l'Alsace (Haut-Rhin et Bas-Rhin). Je me déplace également partout en France pour des projets d'envergure ou pour des résidences artistiques."
     }
   ],
-  "lastUpdated": "2026-11-14T11:08:55.577Z",
+  "lastUpdated": "2026-11-25T17:09:52.335Z",
   "categories": [
     {
       "id": "fresques",
